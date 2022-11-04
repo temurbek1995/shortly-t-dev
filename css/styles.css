@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/') format('woff2'),
+    url('../fonts/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+    url('../fonts/Poppins-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -82,30 +100,87 @@ select:-webkit-autofill:focus {
 
 /* SITE-HEADER */
 .site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .site-header__container {
+  display: flex;
+  align-items: center;
 }
-.container {
-}
+
 .site-header__logo {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 45px;
 }
-.logo {
+.site-header__logo:hover {
+  opacity: 0.7;
 }
 .logo__img {
+  width: 120px;
+  height: 32px;
+  display: flex;
 }
 .site-header__nav {
-}
-.nav {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
 }
 .nav__list {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
 }
-.nav__item {
+.nav__item:not(:last-child) {
+  margin-right: 29px;
 }
 .nav__link {
+  text-decoration: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #9e9aa8;
+}
+.nav__link:hover {
+  opacity: 0.7;
+}
+.nav__btn-wrapper {
+  display: flex;
+  align-items: center;
 }
 .site-header__btn {
+  padding: 8px 23px;
+  cursor: pointer;
+}
+.site-header__btn:hover {
+  opacity: 0.7;
+}
+.site-header__btn--login {
+  margin-right: 37px;
+  display: inline-block;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #9e9aa8;
+  border: 0;
+  background: transparent;
 }
 .site-header__btn--blue {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  border-radius: 28px;
+  background: #2bd0d0;
+  border: 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min--moz-device-pixel-ratio: 2),
